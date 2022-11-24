@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<!--------------- Product title & info --------------->
+
+<section class="grid grid-cols-2">
+  <div><img src="{{page.product-image}}" class=""></div>
+  <div>
+    <h2>{{page.title}}</h2>
+    <p>{{page.product-description}}</p>
+    <span>{{page.product-price}}</span>
+  </div>
+</section>
+
+<!--------------- Sneak peak carousel --------------->
+
+{% include ebook-sneakpeak.html %}
+
+<!--------------- Video section --------------->
+
+<h2>How to use our presets</h2>
+
+{% include video.html %}
+
+<!--------------- Reviews --------------->
+
+<section class="p-10">
+  <h2>Reviews</h2>
+  <div class="grid grid-cols-3 gap-5">
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+  </div>
+</section>
+
+
+<!------------------ Related posts ------------------>
+
+<section class="grid grid-cols-3 p-6 gap-5">
+
+  {% assign ebooks = site.products_ebook %}
+  {% assign featuredEbooks = ebooks | where:'featured','true' %}
+  {% for item in featuredEbooks limit:3 %}
+  
+    {% include product-preview.html %}
+  
+  {% endfor %}
+  </section>

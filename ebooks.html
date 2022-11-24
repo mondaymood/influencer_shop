@@ -1,0 +1,54 @@
+---
+layout: default
+title: Presets
+featured-image: https://images.unsplash.com/photo-1573790387438-4da905039392?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFsaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60
+video-id: UK23kO7cMeo
+---
+
+<!--------------- Intro sales pitch --------------->
+
+<section class="grid grid-cols-2 p-6 gap-3">
+  <div class="">
+    <img src="{{page.featured-image}}" class="h-[50vh] w-full object-cover">
+  </div>
+  <div>
+    <h2>{{page.title}}</h2>
+    <span>Buy me</span>
+  </div>
+</div>
+</section>
+
+
+<!--------------- Most popular products (9 items) --------------->
+
+
+<section class="grid grid-cols-3 p-6 gap-5">
+
+  {% assign ebooks = site.products_ebook %}
+  {% assign featuredEbooks = ebooks | where:'featured','true' %}
+  {% for item in featuredEbooks limit:9 %}
+  
+  <div class="py-4">
+    <a href="{{item.url}}"><img class="container mx-auto aspect-[3/4] object-cover mb-5" src="{{item.product-image}}"></a>
+  
+    <a href="{{item.url}}" class="inline-block text-2xl featured-text my-4">{{item.title}}</a>
+    <span class="block">Buy me</span>
+  </div>
+  
+  {% endfor %}
+  </section>
+
+
+<!--------------- Sneak peak carousel --------------->
+
+{% include ebook-sneakpeak.html %}
+
+<!--------------- Testimonials --------------->
+
+{% assign testimonials = site.data.testimonials | where:'product-type','ebook' %}
+{% include testimonials.html %}
+
+<!--------------- FAQs --------------->
+
+{% assign faqs = site.data.faqs | where:'product-type','ebook' %}
+{% include faqs.html %}

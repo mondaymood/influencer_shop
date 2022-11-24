@@ -1,0 +1,9 @@
+- name: Anna
+  quote: Lovely product
+  product-type: ebook
+- name: Lea
+  quote: Lovely product
+  product-type: ebook  
+- name: Tom
+  quote: Lovely product
+  product-type: preset    
