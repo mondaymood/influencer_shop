@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
  
-/* .button {
-    @apply inline-block p-6 border-b border-b-black hover:border-b-beige transition;
-} */
+@layer components {
+    .button {
+      @apply inline-block py-4 px-6 bg-dark-beige hover:bg-medium-beige text-white text-[0.8rem] uppercase tracking-[.2em];
+    }
+    .nav {
+        @apply text-[0.8rem] hover:border-b pb-2 uppercase tracking-[.2em];
+      }
+  }
 
 @font-face {
     font-family: "Ginger";
@@ -12,6 +17,7 @@
   }
 
 
-h2 {
+h1, h2 {
     font-family: "Ginger", serif;
+    font-size: 3rem;
 }  

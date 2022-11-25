@@ -1,12 +1,22 @@
-<section class="p-10 grid grid-cols-3 bg-slate-300 container mx-auto text-center">
+<!------------------ Testimonials ------------------>
 
-  {% for item in testimonials %}
-  
-    <div>
-      <h2>{{item.name}}</h2>
-      <p>{{item.quote}}</p>
-    </div>
-  
-  {% endfor %}
-  </section>
+
+<div class="pt-10 pb-16 w-[50%] mx-auto text-center">
+
+  <h3 class="mb-10 border-b pb-2 inline-block">What other customers think:</h3>
+ 
+  <div class="flex flex-row items-center">
+    <div class="p-10 text-6xl text-medium-beige opacity-50">“</div>
+
+    {% for item in testimonials limit:1 %}
+      <div>
+        <h2>{{item.name}}</h2>
+        <p>{{item.quote}}</p>
+      </div>
+    {% endfor %}
+
+    <div class="p-10 text-6xl text-medium-beige opacity-50">”</div>
+  </div>
+
+</div>
   

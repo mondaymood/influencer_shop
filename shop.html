@@ -9,17 +9,17 @@ title: Shop
 {% assign featuredEbooks = ebooks | where:'featured','true' %}
 {% for item in featuredEbooks limit:1 %}
 
-<section class="bg-beige">
-  <div class="grid grid-cols-2 p-20 gap-3 container mx-auto items-center">
+<section class="bg-beige py-20">
+  <div class="grid grid-cols-2 gap-3 container mx-auto items-center">
     
-    <div class="flex justify-end">
-      <img src="{{item.product-image}}" class="object-cover h-[80vh]">
+    <div class="">
+      <img src="{{item.product-image}}" class="border p-6 bg-white w-full object-cover h-[80vh]">
     </div>
 
     <div class="p-10">
-      <h2 class="mb-5">{{item.title}}</h2>
-      <p class="mb-7">{{item.product-description}}</p>
-      <a href="{{item.url}}" class="border border-black w-10 px-4 py-2">Buy me!</a>
+      <h1 class="mb-5">{{item.title}}</h1>
+      <p class="mb-10">{{item.product-description}}</p>
+      <a href="{{item.url}}" class="button">Read more</a>
     </div>
 
   </div>
@@ -30,8 +30,8 @@ title: Shop
 <!--------------- Most popular ebooks (3 items) --------------->
 
 <section class="my-20"> 
-  <h2 class="text-2xl text-center mb-12">Our most popular e-books</h2>
-  <div class="grid grid-cols-3 gap-24 container px-10 mx-auto">
+  <h2 class="text-center mb-12">Our most popular e-books</h2>
+  <div class="grid grid-cols-3 gap-10 container px-10 mx-auto">
   {% for item in featuredEbooks offset:1 limit:3 %}  
 
     {% include product-preview.html %}
@@ -44,8 +44,8 @@ title: Shop
 
 
 <section class="my-20"> 
-  <h2 class="text-2xl text-center mb-1.5">Our most popular presets</h2>
-  <div class="grid grid-cols-3 gap-24 container px-10 mx-auto">
+  <h2 class="text-center mb-12">Our most popular presets</h2>
+  <div class="grid grid-cols-3 gap-10 container px-10 mx-auto">
 
   {% assign presets = site.products_preset %}
   {% assign featuredPresets = presets | where:'featured','true' %}

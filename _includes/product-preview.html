@@ -1,7 +1,7 @@
 <!------------------ Product preview ------------------>
 
-<div class="text-center">
-  <a href="{{item.url}}"><img class="hover:drop-shadow-xl container mx-auto object-cover mb-5" src="{{item.product-image}}"></a>
-  <a href="{{item.url}}" class="text-2xl featured-text my-4 block">{{item.title}}</a>
-  <a href="{{item.url}}" class="border border-black w-10 px-4 py-2">Buy me!</a>
-</div>
+<a href="{{item.url}}" class="text-center block border bg-white p-12 hover:drop-shadow-xl">
+  <div><img class="container mx-auto object-cover mb-5" src="{{item.product-image}}"></div>
+  <h3 class="featured-text my-4 block">{{item.title}}</h3>
+  <div class="button">Shop now</div>
+</a>
