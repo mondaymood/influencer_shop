@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
  
-.button {
-    @apply inline-block p-6 bg-blue-600 text-white hover:bg-blue-800 transition;
-}
+/* .button {
+    @apply inline-block p-6 border-b border-b-black hover:border-b-beige transition;
+} */

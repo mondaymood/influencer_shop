@@ -1,4 +1,71 @@
 ---
 layout: default
-title: Presets
 ---
+
+<!--------------- Product title & info --------------->
+
+<section class="grid grid-cols-2">
+  <div><img src="{{page.product-image}}" class=""></div>
+  <div>
+    <h2>{{page.title}} hello</h2>
+    <p>{{page.product-description}}</p>
+    <span>{{page.product-price}}</span>
+  </div>
+</section>
+
+<!--------------- Image slider Before/After --------------->
+
+<section class="grid grid-cols-6 p-6">
+  <div class="col-span-1">
+    <span>Sunshine Preset</span>
+  </div>
+  <div class="col-span-5">
+    <img src="{{page.featured-image}}" class="h-[50vh] w-full object-cover">
+  </div>
+</section>
+
+<!--------------- Chapter outline --------------->
+
+<section class="p-10">
+  <div class="grid grid-cols-2 gap-5">
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+  </div>
+</section>
+
+
+<!--------------- Reviews --------------->
+
+<section class="p-10">
+  <h2>Reviews</h2>
+  <div class="grid grid-cols-3 gap-5">
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+    </div>
+  </div>
+</section>
+
+
+<!------------------ Related posts ------------------>
+
+<section class="grid grid-cols-3 p-6 gap-5">
+
+  {% assign presets = site.products_preset %}
+  {% assign featuredPresets = presets | where:'featured','true' %}
+  {% for item in featuredPresets limit:3 %}
+  
+    {% include product-preview.html %}
+  
+  {% endfor %}
+  </section>
+

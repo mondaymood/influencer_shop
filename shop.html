@@ -9,56 +9,56 @@ title: Shop
 {% assign featuredEbooks = ebooks | where:'featured','true' %}
 {% for item in featuredEbooks limit:1 %}
 
-<section class="grid grid-cols-2 p-6 gap-3">
-  <div class="">
-    <img src="{{item.product-image}}" class="object-cover">
+<section class="bg-beige">
+  <div class="grid grid-cols-2 p-20 gap-3 container mx-auto items-center">
+    
+    <div class="flex justify-end">
+      <img src="{{item.product-image}}" class="object-cover h-[80vh]">
+    </div>
+
+    <div class="p-10">
+      <h2 class="mb-5">{{item.title}}</h2>
+      <p class="mb-7">{{item.product-description}}</p>
+      <a href="{{item.url}}" class="border border-black w-10 px-4 py-2">Buy me!</a>
+    </div>
+
   </div>
-  <div>
-    <h2>{{item.title}}</h2>
-    <span>Buy me</span>
-  </div>
-</div>
 </section>
 
 {% endfor %}
 
 <!--------------- Most popular ebooks (3 items) --------------->
 
-<section class="grid grid-cols-3 p-6 gap-5">
-  
+<section class="my-20"> 
+  <h2 class="text-2xl text-center mb-12">Our most popular e-books</h2>
+  <div class="grid grid-cols-3 gap-24 container px-10 mx-auto">
+  {% for item in featuredEbooks offset:1 limit:3 %}  
 
-{% for item in featuredEbooks offset:1 limit:3 %}  
+    {% include product-preview.html %}
 
-<div class="py-4">
-  <a href="{{item.url}}"><img class="container mx-auto aspect-[3/4] object-cover mb-5" src="{{item.product-image}}"></a>
-
-  <a href="{{item.url}}" class="inline-block text-2xl featured-text my-4">{{item.title}}</a>
-  <span class="block">Buy me</span>
-</div>
-
-{% endfor %}
-
+  {% endfor %}
+  </div>
 </section>
 
 <!--------------- Most popular presets (3 items) --------------->
 
-<section class="grid grid-cols-3 p-6 gap-5">
 
-{% assign presets = site.products_preset %}
-{% assign featuredPresets = presets | where:'featured','true' %}
-{% for item in featuredPresets limit:3 %}
+<section class="my-20"> 
+  <h2 class="text-2xl text-center mb-1.5">Our most popular presets</h2>
+  <div class="grid grid-cols-3 gap-24 container px-10 mx-auto">
 
-<div class="py-4">
-  <a href="{{item.url}}"><img class="container mx-auto aspect-[3/4] object-cover mb-5" src="{{item.product-image}}"></a>
+  {% assign presets = site.products_preset %}
+  {% assign featuredPresets = presets | where:'featured','true' %}
+  {% for item in featuredPresets limit:3 %}
 
-  <a href="{{item.url}}" class="inline-block text-2xl featured-text my-4">{{item.title}}</a>
-  <span class="block">Buy me</span>
-</div>
+  {% include product-preview.html %}
 
-{% endfor %}
+  {% endfor %}
+  </div>
 </section>
 
 <!--------------- Testimonials --------------->
-
+<section class="bg-beige p-6">
 {% assign testimonials = site.data.testimonials %}
 {% include testimonials.html %}
+</section>
