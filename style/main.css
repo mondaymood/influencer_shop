@@ -5,3 +5,13 @@
 /* .button {
     @apply inline-block p-6 border-b border-b-black hover:border-b-beige transition;
 } */
+
+@font-face {
+    font-family: "Ginger";
+    src: url("/assets/fonts/Ginger.ttf");
+  }
+
+
+h2 {
+    font-family: "Ginger", serif;
+}  

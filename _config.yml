@@ -3,3 +3,7 @@ collections:
     output: true
   products_ebook:
     output: true
+
+assets:
+   sources:
+       -_assets/fonts
