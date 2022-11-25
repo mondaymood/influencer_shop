@@ -1,12 +1,15 @@
-<div class="m-6 p-6 container mx-auto">
+<!------------------ FAQs ------------------>
 
+<div class="p-10 container mx-auto">
+  
+  <h2 class="text-center">Any questions?</h2>
+  
   {% for item in faqs %}
   
-    <div>
-      <h3>{{item.question}}</h3>
+    <div class="pb-10 border-b pt-10 first:pt:0 last:border-b-0 last:pb-0">
+      <h3><strong>{{item.question}}</strong></h3>
       <p>{{item.answer}}</p>
     </div>
   
   {% endfor %}
-  </div>
-  
+</div>

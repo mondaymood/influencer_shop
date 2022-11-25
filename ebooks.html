@@ -1,42 +1,46 @@
 ---
 layout: default
-title: Presets
-featured-image: https://images.unsplash.com/photo-1573790387438-4da905039392?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFsaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60
+title: Travel the world with our wonderful guides
+featured-image: /assets/images/shop_ebook_1.jpg
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non dolorem animi, unde harum aut ratione earum tempora praesentium? Explicabo delectus corrupti quisquam nulla earum perferendis doloremque nam, repudiandae consequatur qui.
 video-id: UK23kO7cMeo
 ---
 
 <!--------------- Intro sales pitch --------------->
 
-<section class="grid grid-cols-2 p-6 gap-3">
-  <div class="">
-    <img src="{{page.featured-image}}" class="h-[50vh] w-full object-cover">
+<section class="bg-beige py-20">
+  <div class="grid grid-cols-2 gap-3 container mx-auto items-center">
+    
+    <div class="">
+      <img src="{{page.featured-image}}" class="border p-6 bg-white w-full object-cover h-[80vh]">
+    </div>
+
+    <div class="p-10">
+      <h1 class="mb-5">{{page.title}}</h1>
+      <p class="mb-10">{{page.description}}</p>
+    </div>
+
   </div>
-  <div>
-    <h2>{{page.title}}</h2>
-    <span>Buy me</span>
-  </div>
-</div>
 </section>
 
 
 <!--------------- Most popular products (9 items) --------------->
 
 
-<section class="grid grid-cols-3 p-6 gap-5">
+<section class="container px-10 mx-auto my-20"> 
+  <h2 class="text-center mb-12">Our most popular e-books</h2>
+  <div class="grid grid-cols-3 gap-10">
 
   {% assign ebooks = site.products_ebook %}
   {% assign featuredEbooks = ebooks | where:'featured','true' %}
   {% for item in featuredEbooks limit:9 %}
   
-  <div class="py-4">
-    <a href="{{item.url}}"><img class="container mx-auto aspect-[3/4] object-cover mb-5" src="{{item.product-image}}"></a>
-  
-    <a href="{{item.url}}" class="inline-block text-2xl featured-text my-4">{{item.title}}</a>
-    <span class="block">Buy me</span>
-  </div>
+  {% include product-preview.html %}
   
   {% endfor %}
-  </section>
+
+  </div>
+</section>
 
 
 <!--------------- Sneak peak carousel --------------->
@@ -45,10 +49,14 @@ video-id: UK23kO7cMeo
 
 <!--------------- Testimonials --------------->
 
-{% assign testimonials = site.data.testimonials | where:'product-type','ebook' %}
-{% include testimonials.html %}
+<section class="bg-beige p-6">
+  {% assign testimonials = site.data.testimonials | where:'product-type','ebook' %}
+  {% include testimonials.html %}
+  </section>
 
 <!--------------- FAQs --------------->
 
-{% assign faqs = site.data.faqs | where:'product-type','ebook' %}
-{% include faqs.html %}
+<section class="bg-medium-beige p-6">
+  {% assign faqs = site.data.faqs | where:'product-type','ebook' %}
+  {% include faqs.html %}
+  </section>

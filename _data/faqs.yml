@@ -1,18 +1,18 @@
-- question: Where do you live
-  answer: I live in Bali
+- question: Where do you live?
+  answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: preset
-- question: Where do you live
-  answer: I live in Bali
+- question: How to install the preset?
+  answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: preset
-- question: Where do you live
-  answer: I live in Bali
+- question: Do the presets for for mobile?
+  answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: preset
-- question: Where do you live
-  answer: I live in Bali
+- question: Do I need Lightroom?
+  answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: preset
 - question: What is an ebook?
-  answer: I live in Bali
+  answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: ebook
-- question: What is an ebook?
-  answer: I live in Bali
+- question: Can I read this on kindle?
+  answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: ebook
