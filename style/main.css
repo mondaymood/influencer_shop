@@ -1,7 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+
+html {
+  scroll-behavior: smooth;
+} 
+
 @layer components {
     .button {
       @apply inline-block py-4 px-6 bg-dark-beige hover:bg-medium-beige text-white text-[0.8rem] uppercase tracking-[.2em];
