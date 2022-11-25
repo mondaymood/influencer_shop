@@ -4,12 +4,20 @@ layout: default
 
 <!--------------- Product title & info --------------->
 
-<section class="grid grid-cols-2">
-  <div><img src="{{page.product-image}}" class=""></div>
-  <div>
-    <h2>{{page.title}}</h2>
-    <p>{{page.product-description}}</p>
-    <span>{{page.product-price}}</span>
+<section class="bg-beige py-20">
+  <div class="grid grid-cols-2 gap-3 container mx-auto items-center">
+    
+    <div class="">
+      <img src="{{page.product-image}}" class="border p-6 bg-white w-full object-cover h-[80vh]">
+    </div>
+
+    <div class="p-10 flex-col">
+      <h1 class="mb-5">{{page.title}}</h1>
+      <p class="mb-10">{{page.product-description}}</p>
+      <span class="block pb-10">{{page.product-price}}</span>
+      <a href="#products_overview" class="button">Add to basket</a>
+    </div>
+
   </div>
 </section>
 
@@ -17,39 +25,68 @@ layout: default
 
 {% include ebook-sneakpeak.html %}
 
-<!--------------- Video section --------------->
+<hr>
 
-<h2>How to use our presets</h2>
+<!--------------- Chapter outline --------------->
 
-{% include video.html %}
+<section class="py-20 container mx-auto">
+  <h2 class="pb-10 text-center">Chapter outline</h2>
+  <div class="grid grid-cols-2 gap-20 max-w-3xl mx-auto">
+    <div>
+      <ul class="list-none">
+        {% for item in page.chapter_left %}
+        <li class="block mb-2 pb-2 border-b">{{item}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <ul class="list-none">
+        {% for item in page.chapter_right %}
+        <li class="block mb-2 pb-2 border-b">{{item}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!--------------- Reviews --------------->
 
-<section class="p-10">
-  <h2>Reviews</h2>
-  <div class="grid grid-cols-3 gap-5">
-    <div>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
-    </div>
-    <div>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
-    </div>
-    <div>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
-    </div>
+<section class="p-20 bg-beige">
+  <div class="container mx-auto p-6">
+  <h2 class="pb-10">Reviews</h2>
+    <div class="grid grid-cols-3 gap-20">
+      <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+        <span class="block mt-6">&#8902; &#8902; &#8902; &#8902; &#8902;</span>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+        <span class="block mt-6">&#8902; &#8902; &#8902; &#8902; &#8902;</span>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint asperiores corporis vitae vel culpa magnam ex minus accusamus, voluptatum adipisci itaque soluta debitis autem obcaecati numquam iusto? Molestias, illum similique!</p>
+        <span class="block mt-6">&#8902; &#8902; &#8902; &#8902; &#8902;</span>
+      </div>
+    </div> 
   </div>
 </section>
 
 
 <!------------------ Related posts ------------------>
 
-<section class="grid grid-cols-3 p-6 gap-5">
+<section class="my-20">
 
-  {% assign ebooks = site.products_ebook %}
-  {% assign featuredEbooks = ebooks | where:'featured','true' %}
-  {% for item in featuredEbooks limit:3 %}
-  
-    {% include product-preview.html %}
-  
-  {% endfor %}
-  </section>
+  <h2 class="text-center">You might like these as well:</h2>
+
+  <div class="grid grid-cols-3 p-6 gap-5 container mx-auto">
+
+    {% assign ebooks = site.products_ebook %}
+    {% assign featuredEbooks = ebooks | where:'featured','true' %}
+    {% for item in featuredEbooks limit:3 %}
+    
+      {% include product-preview.html %}
+    
+    {% endfor %}
+  </div>
+</section>

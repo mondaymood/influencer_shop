@@ -16,6 +16,21 @@ html {
       }
   }
 
+@layer utilities {
+  .list-dashed {
+    @apply m-0 list-none;
+  }
+}  
+
+.list-dashed > li {
+  text-indent: -5px;
+}
+
+.list-dashed > li:before {
+  content: "-";
+  @apply pr-2;
+}
+
 @font-face {
     font-family: "Ginger";
     src: url("/assets/fonts/Ginger.ttf");
@@ -27,3 +42,4 @@ h1, h2 {
     font-size: 3rem;
     line-height: 3.4rem;
 }  
+

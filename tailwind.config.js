@@ -8,7 +8,15 @@ module.exports = {
     './*.{html,md}'
   ],
   theme: {
-    extend: {},
+    extend: {
+    },
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
+    },
     colors: {
       'white': '#ffffff',
       'black': '#000000',
