@@ -8,7 +8,7 @@ layout: default
   <h1 class="text-center my-10">Get in touch</h1> 
   
   <div class="w-full container md:max-w-full mx-auto mb-10">
-    <div class="px-20">
+    <div class="md:px-20">
       <form method="POST" action="https://formspree.io/f/mqkwbvve">
         
         <!----------- Name ----------->
@@ -17,8 +17,8 @@ layout: default
           <input
             type="text"
             name="name"
-            class="outline-none block w-full mt-1 border-graphit shadow-sm focus:outline-medium-beige focus:ring focus:ring-beige p-3 placeholder-graphit focus:ring-opacity-50"
-            placeholder="Joe Bloggs"/>
+            class="outline-none block w-full mt-1 border-graphit shadow-sm focus:outline-medium-beige focus:ring focus:ring-beige p-3 placeholder-graphit/25 focus:ring-opacity-50"
+            placeholder="Jane Doe"/>
         </label>
 
         <!----------- Email ----------->
@@ -27,8 +27,8 @@ layout: default
           <input
             name="email"
             type="email"
-            class="outline-none block w-full mt-1 border-graphit shadow-sm focus:outline-medium-beige focus:ring focus:ring-beige focus:ring-opacity-50 p-3 placeholder-graphit"
-            placeholder="joe.bloggs@example.com"
+            class="outline-none block w-full mt-1 border-graphit shadow-sm focus:outline-medium-beige focus:ring focus:ring-beige focus:ring-opacity-50 p-3 placeholder-graphit/25"
+            placeholder="jane.doe@example.com"
             required/></label>
 
         <!----------- Message ----------->
@@ -36,7 +36,7 @@ layout: default
           <span class="text-gray-700">Message</span>
           <textarea
             name="message"
-            class="outline-none block w-full mt-1 border-graphit shadow-sm focus:outline-medium-beige focus:ring focus:ring-beige focus:ring-opacity-50 p-3 placeholder-graphit"
+            class="outline-none block w-full mt-1 border-graphit shadow-sm focus:outline-medium-beige focus:ring focus:ring-beige focus:ring-opacity-50 p-3 placeholder-graphit/25"
             rows="3"
             placeholder="Tell us what you're thinking about..."></textarea>
         </label>
