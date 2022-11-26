@@ -10,6 +10,10 @@ module.exports = {
   theme: {
     extend: {
     },
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     listStyleType: {
       none: 'none',
       disc: 'disc',

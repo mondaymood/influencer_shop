@@ -10,13 +10,13 @@ title: Shop
 {% for item in featuredEbooks limit:1 %}
 
 <section class="bg-beige py-10 md:py-20">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 container mx-auto p-6 items-center">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 container items-center">
      
     <div class="">
       <img src="{{item.product-image}}" class="border p-6 bg-white w-full object-cover h-[80vh]">
     </div>
 
-    <div class="py-10 md:px-10">
+    <div class="py-10">
       <h1 class="mb-5">{{item.title}}</h1>
       <p class="mb-10">{{item.product-description}}</p>
       <a href="{{item.url}}" class="button">Read more</a>
@@ -31,7 +31,7 @@ title: Shop
 
 <section class="my-20"> 
   <h2 class="text-center mb-12">Our most popular e-books</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 container px-10 mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
   {% for item in featuredEbooks offset:1 limit:3 %}  
 
     {% include product-preview.html %}
@@ -45,7 +45,7 @@ title: Shop
 
 <section class="my-20"> 
   <h2 class="text-center mb-12">Our most popular presets</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 container px-10 mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
 
   {% assign presets = site.products_preset %}
   {% assign featuredPresets = presets | where:'featured','true' %}
