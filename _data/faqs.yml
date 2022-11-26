@@ -1,18 +1,23 @@
 - question: Where do you live?
   answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: preset
+  data: 1
 - question: How to install the preset?
   answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: preset
+  data: 2
 - question: Do the presets for for mobile?
   answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: preset
+  data: 3
 - question: Do I need Lightroom?
   answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
-  product-type: preset
+  data: 4
 - question: What is an ebook?
   answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: ebook
+  data: 5
 - question: Can I read this on kindle?
   answer: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius sapiente id, laboriosam adipisci assumenda explicabo perspiciatis facere soluta illo delectus necessitatibus debitis doloremque eum aliquam excepturi neque provident temporibus inventore.
   product-type: ebook
+  data: 6

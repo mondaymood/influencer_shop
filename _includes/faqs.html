@@ -6,10 +6,13 @@
   
   {% for item in faqs %}
   
-    <div class="pb-10 border-b pt-10 first:pt:0 last:border-b-0 last:pb-0">
-      <h3><strong>{{item.question}}</strong></h3>
-      <p>{{item.answer}}</p>
+    <div class="expandButton cursor-pointer my-5" data-target-button="{{item.data}}">
+      <h3><strong><span class="symbol"></span>          {{item.question}}</strong></h3>
     </div>
+    <div class="expandable hide-answer"  data-target-more="{{item.data}}">
+      <p class="mb-5">{{item.answer}}</p>
+    </div>
+    <hr class="">
   
   {% endfor %}
 </div>

@@ -7,6 +7,7 @@ html {
   scroll-behavior: smooth;
 } 
 
+
 @layer components {
     .button {
       @apply inline-block py-4 px-6 bg-dark-beige hover:bg-medium-beige text-white text-[0.8rem] uppercase tracking-[.2em];
@@ -43,3 +44,25 @@ h1, h2 {
     line-height: 3.4rem;
 }  
 
+/* ------------ FAQs Accordion ------------ */
+
+.expandable {
+  overflow: hidden;
+  max-height: 10rem; 
+  transition: 1s;
+}
+
+.hide-answer { 
+  max-height: 0;
+  transition: 0.5s;
+  margin-bottom: 0rem;
+}
+
+.expandButton .symbol::before {
+  content: '↘';
+  margin-right: 0.5rem;
+}
+.expandButton.active .symbol::before {
+  content: '↖';
+  margin-right: 0.5rem;
+}
