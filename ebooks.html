@@ -41,10 +41,12 @@ sale: true
 
 <!--------------- Testimonials --------------->
 
+{% assign testimonials = site.data.testimonials | where:'product-type','ebook' %}
 <section class="bg-beige p-6">
-  {% assign testimonials = site.data.testimonials | where:'product-type','ebook' %}
-  {% include testimonials.html %}
-  </section>
+
+    {% include testimonials.html %}
+
+</section>
 
 <!--------------- FAQs --------------->
 

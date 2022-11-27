@@ -32,10 +32,12 @@ sale: false
 
 <!--------------- Testimonials --------------->
 
+{% assign testimonials = site.data.testimonials | where:'product-type','preset' %}
 <section class="bg-beige p-6">
-  {% assign testimonials = site.data.testimonials | where:'product-type','preset' %}
-  {% include testimonials.html %}
-  </section>
+  
+    {% include testimonials.html %}
+
+</section>
 
 <!--------------- Image slider Before/After --------------->
 

@@ -19,5 +19,6 @@ chapter_right:
   - <strong>Chapter 6 – </strong> What to do
   - <strong>Chapter 7 – </strong> What to do 
   - <strong>Chapter 8 – </strong> What to do
+map: /assets/images/bali_map.png  
 ---
 

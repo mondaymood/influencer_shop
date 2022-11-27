@@ -66,3 +66,36 @@ h1, h2 {
   content: '↖';
   margin-right: 0.5rem;
 }
+
+/* Slider */
+
+.slick-dots {
+  right:0;
+  bottom: -3rem;
+}
+
+.slick-next::before, .slick-prev::before {
+  font-family: Mons;
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: #fff;
+  color: rgb(90, 90, 90);
+}
+
+.slick-prev::before {
+  content: '←';
+}
+
+.slick-next::before {
+  content: '→';
+}
+
+.slick-prev {
+  left: -4rem;
+  z-index: 6;
+}
+
+.slick-next {
+  right: -4rem;
+}
