@@ -27,12 +27,12 @@ sneakpeak:
 
 
 <section class="container px-10 mx-auto pt-20 mb-20" id="products_overview"> 
-  <h2 class="text-center mb-12">Our most popular presets</h2>
+  <h2 class="text-center mb-12">Our most popular ebooks</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
 
   {% assign ebooks = site.products_ebook %}
   {% assign featuredEbooks = ebooks | where:'featured','true' %}
-  {% for item in featuredEbooks limit:6 %}
+  {% for item in featuredEbooks %}
 
   {% include product-preview.html %}
 

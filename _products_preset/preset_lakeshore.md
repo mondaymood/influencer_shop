@@ -1,5 +1,6 @@
 ---
 layout: preset_layout
+type: preset
 shopify-id: 8024228593972
 featured: true
 featured-image: /assets/images/shop_preset_2.jpg

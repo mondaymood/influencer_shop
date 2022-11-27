@@ -21,6 +21,10 @@ layout: default
   </div>
 </section>
 
+<!--------------- Sneak peak carousel --------------->
+
+{% include sneakpeak-slider.html %}
+
 <!--------------- Map --------------->
 
 <section class=""> 
@@ -28,12 +32,6 @@ layout: default
   style="background-image: url('{{page.map}}')">
   </div>
 </section>
-
-<!--------------- Sneak peak carousel --------------->
-
-{% include sneakpeak-slider.html %}
-
-<hr>
 
 <!--------------- Chapter outline --------------->
 
@@ -47,7 +45,7 @@ layout: default
         {% endfor %}
       </ul>
     </div>
-
+    
     <div>
       <ul class="list-none">
         {% for item in page.chapter_right %}

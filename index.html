@@ -1,7 +1,75 @@
 ---
 layout: default
-title: Homepage
+title: Shop
 ---
-<h1 class="text-4xl font-bold text-slate-900 text-purple">Welcome to your homepage!</h1>
 
-<a href="https://influencershop.memberspace.com/member/plans/02970f7fbp">Sign up for secrets</a>
+<!--------------- Featured product --------------->
+
+{% assign ebooks = site.products_ebook %}
+{% assign featuredEbooks = ebooks | where:'featured','true' %}
+{% for item in featuredEbooks limit:1 %}
+
+<section class="bg-beige py-10 md:py-20">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 container items-center relative md:px-20">
+    
+      <div class="p-6 border rounded-full">
+        <div class="rounded-full w-md relative h-[80vh] bg-dark-beige bg-cover bg-center" style="background-image: url('{{item.product.image}}');">
+
+          <!--------------- Sale button --------------->
+          <div class="rounded-full bg-dark-beige h-32 w-32 md:h-44 md:w-44 absolute top-0 md:top-5 -left-2 md:-left-12 flex justify-center items-center drop-shadow">
+            <h2 class="text-4xl text-white tracking-[.1em] -rotate-12">Sale!</h2>
+          </div>
+        </div>
+      </div>
+
+    <div class="p-10">
+      <h1 class="mb-5">{{item.product.title}}</h1>
+      <p class="mb-10">{{item.product.description}}</p>
+      <a href="{{item.url}}" class="button">Read more</a>
+    </div>
+
+  </div>
+</section>
+
+{% endfor %}
+
+
+
+<!--------------- Most popular ebooks (3 items) --------------->
+
+<section class="my-20"> 
+  <h2 class="text-center mb-12">Our most popular e-books</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
+  {% for item in featuredEbooks offset:1 limit:3 %}  
+
+    {% include product-preview.html %}
+
+  {% endfor %}
+  </div>
+</section>
+
+<hr> 
+<!--------------- Most popular presets (3 items) --------------->
+
+
+<section class="my-20"> 
+  <h2 class="text-center mb-12">Our most popular presets</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
+
+  {% assign presets = site.products_preset %}
+  {% assign featuredPresets = presets | where:'featured','true' %}
+  {% for item in featuredPresets limit:3 %}
+
+  {% include product-preview.html %}
+
+  {% endfor %}
+  </div>
+</section>
+
+<!--------------- Testimonials --------------->
+{% assign testimonials = site.data.testimonials %}
+<section class="bg-beige p-6">
+
+    {% include testimonials.html %}
+
+</section>

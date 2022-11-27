@@ -4,9 +4,9 @@ type: ebook
 featured: true
 featured-image: /assets/images/shop_preset_2.jpg
 shopify-id: 8024228331828
-map: https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80
+map: https://images.unsplash.com/photo-1555400038-63f5ba517a47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
 product:
-  title: Vietnam Travel Guide
+  title: Bali Travel Guide
   image: /assets/images/shop_ebook_1.jpg
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero provident nemo tempora iste error sint, velit reiciendis excepturi ab accusantium maiores, unde natus ipsa dolore. Magni sit officiis obcaecati veniam.
   price: 12,99€
