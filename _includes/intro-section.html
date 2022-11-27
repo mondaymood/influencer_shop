@@ -4,7 +4,7 @@
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 container items-center relative md:px-20">
     
       <div class="p-6 border rounded-full">
-        <div class="rounded-full w-md relative h-[80vh] bg-dark-beige bg-cover bg-center" style="background-image: url('{{page.featured-image}}');">
+        <div class="rounded-full w-md relative h-[80vh] bg-dark-beige bg-cover bg-center" style="background-image: url('{{page.intro-section.featured-image}}');">
 
           <!--------------- Sale button --------------->
           {% if page.sale == true %}
@@ -17,9 +17,9 @@
       </div>
 
     <div class="p-10">
-      <h1 class="mb-5">{{page.title}}</h1>
-      <p class="mb-10">{{page.description}}</p>
-      <a href="{{item.url}}" class="button">Read more</a>
+      <h1 class="mb-5">{{page.intro-section.title}}</h1>
+      <p class="mb-10">{{page.intro-section.description}}</p>
+      <a href="#{{page.intro-section.link}}" class="button">Read more</a>
     </div>
 
   </div>

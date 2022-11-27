@@ -10,7 +10,7 @@ html {
 
 @layer components {
     .button {
-      @apply inline-block py-4 px-6 bg-dark-beige hover:bg-medium-beige text-white text-[0.8rem] uppercase tracking-[.2em];
+      @apply inline-block py-4 px-6 hover:bg-dark-beige bg-medium-beige text-white text-[0.8rem] uppercase tracking-[.2em];
     }
     .nav {
         @apply text-[0.8rem] hover:border-b pb-2 uppercase tracking-[.2em];
@@ -59,11 +59,11 @@ h1, h2 {
 }
 
 .expandButton .symbol::before {
-  content: '↘';
+  content: '\002B';
   margin-right: 0.5rem;
 }
 .expandButton.active .symbol::before {
-  content: '↖';
+  content: '\2212';
   margin-right: 0.5rem;
 }
 
