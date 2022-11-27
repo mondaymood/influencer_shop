@@ -36,7 +36,7 @@ intro-section:
 
 <!--------------- Testimonials --------------->
 
-{% assign testimonials = site.data.testimonials | where:'product-type','preset' %}
+{% assign testimonials = site.data.testimonials | where:'product.type','preset' %}
 <section class="bg-beige p-6">
   
     {% include testimonials.html %}
@@ -63,13 +63,13 @@ intro-section:
 <!--------------- FAQs --------------->
 
 <section class="bg-medium-beige p-6">
-{% assign faqs = site.data.faqs | where:'product-type','preset' %}
+{% assign faqs = site.data.faqs | where:'product.type','preset' %}
 {% include faqs.html %}
 </section>
 
 <!--------------- Video section --------------->
 
-<section class="my-10 text-center container mx-auto">
+<section class="my-20 text-center container mx-auto">
 
   <h2>How to use our presets</h2>
 

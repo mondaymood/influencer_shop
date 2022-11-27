@@ -23,9 +23,6 @@ html {
   }
 }  
 
-iframe {
-  transition: height 2s;
-}
 
 .list-dashed > li {
   text-indent: -5px;

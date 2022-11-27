@@ -1,8 +1,8 @@
 ---
 layout: ebook_layout
 title: Bali Travel Guide
-shopify-id: 8024228331828
 product-type: ebook
+shopify-id: 8024228331828
 product-image: /assets/images/shop_ebook_1.jpg
 product-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero provident nemo tempora iste error sint, velit reiciendis excepturi ab accusantium maiores, unde natus ipsa dolore. Magni sit officiis obcaecati veniam.
 product-price: 12,99€

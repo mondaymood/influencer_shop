@@ -8,14 +8,14 @@ layout: default
   <div class="grid grid-cols-2 gap-3 container mx-auto items-center">
     
     <div class="">
-      <img src="{{page.product-image}}" class="border p-6 bg-white w-full object-cover h-[80vh]">
+      <img src="{{page.product.image}}" class="border p-6 bg-white w-full object-cover h-[80vh]">
     </div>
 
     <div class="p-10 flex-col">
-      <h1 class="mb-5">{{page.title}}</h1>
-      <p class="mb-10">{{page.product-description}}</p>
-      <span class="block pb-10">{{page.product-price}}</span>
-      <div id='product-component-1669538341289'></div>
+      <h1 class="mb-5">{{page.product.title}}</h1>
+      <p class="mb-10">{{page.product.description}}</p>
+      <span class="block pb-10">{{page.product.price}}</span>
+      <div class="transition duration-500" id='product-component-1669547015174'></div>
     </div>
 
   </div>
@@ -23,24 +23,24 @@ layout: default
 
 <!--------------- Image slider Before/After --------------->
 
-<section class="grid grid-cols-6 container mx-auto my-20 ">
+<section class="container my-20 ">
   
-  <div class="col-span-6 text-center pb-14">
+  <div class="text-center pb-14">
     <h2>Preview our presets</h2>
   </div>
-  <div class="col-span-1">
-    <span class="border-b pb-1 mb-4 inline-block hover:text-medium-beige cursor-pointer">Sunshine Preset</span>
-    <span class="border-b pb-1 mb-4 inline-block hover:text-medium-beige cursor-pointer">Sunshine Preset</span>
-    <span class="border-b pb-1 mb-4 inline-block hover:text-medium-beige cursor-pointer">Sunshine Preset</span>
-  </div>
-  <div class="col-span-5">
-    <img src="{{page.featured-image}}" class="h-[60vh] w-full object-cover">
-  </div>
+
+    <div class="ba-container mx-auto">
+      <div class='ba-img ba-background-img'></div>
+      <div class='ba-img ba-foreground-img'></div>
+      <input type="range" min="1" max="100" value="50" class="ba-slider" name='ba-slider' id="ba-slider">
+      <div class='ba-slider-button'></div>
+    </div>
+
 </section>
 
 <!--------------- Video section --------------->
 
-<section class="my-10 p-6 text-center container mx-auto">
+<section class="my-20 text-center container mx-auto">
 
   <h2>How to use our presets</h2>
 
