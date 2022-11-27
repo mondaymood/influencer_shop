@@ -6,25 +6,12 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non dolor
 sneakpeak-image-1: /assets/images/shop_ebook_1.jpg
 sneakpeak-title-1: All the best places to stay
 sneakpeak-description-1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut optio officiis fugit neque ipsum deleniti perferendis, assumenda dolores alias sed doloribus temporibus dicta! Nesciunt at ex fugiat aperiam. Iusto, illum.
+sale: true
 ---
 
 <!--------------- Intro sales pitch --------------->
 
-<section class="bg-beige py-10 md:py-20">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 container items-center relative md:px-20">
-    
-    <div class="">
-      <img src="{{page.featured-image}}" class="border p-6 bg-white w-full object-cover h-[50vh] md:h-[80vh]">
-    </div>
-
-    <div class="p-10">
-      <h1 class="mb-5">{{page.title}}</h1>
-      <p class="mb-10">{{page.description}}</p>
-      <a href="#products_overview" class="button">Read more</a>
-    </div>
-
-  </div>
-</section>
+{% include intro-section.html %}
 
 <!--------------- Most popular products (9 items) --------------->
 
@@ -33,9 +20,9 @@ sneakpeak-description-1: Lorem ipsum dolor sit amet consectetur adipisicing elit
   <h2 class="text-center mb-12">Our most popular presets</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
 
-  {% assign presets = site.products_preset %}
-  {% assign featuredPresets = presets | where:'featured','true' %}
-  {% for item in featuredPresets limit:6 %}
+  {% assign ebooks = site.products_ebook %}
+  {% assign featuredEbooks = ebooks | where:'featured','true' %}
+  {% for item in featuredEbooks limit:6 %}
 
   {% include product-preview.html %}
 

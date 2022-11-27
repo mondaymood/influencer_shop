@@ -1,25 +1,12 @@
 ---
 layout: default
 title: Hi, I'm Anya
-about-image: https://images.unsplash.com/photo-1541779408-c355f91b42c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80
-about-description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, magnam? Et, nemo ducimus, tempora eligendi est enim minima similique repellat culpa dignissimos deleniti molestiae commodi quaerat illo? Maiores, quisquam quae!
+featured-image: https://images.unsplash.com/photo-1541779408-c355f91b42c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80
+description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, magnam? Et, nemo ducimus, tempora eligendi est enim minima similique repellat culpa dignissimos deleniti molestiae commodi quaerat illo? Maiores, quisquam quae!
+sale: false
 ---
 
-<section class="bg-beige py-20">
-  <div class="grid grid-cols-2 gap-3 container mx-auto items-center">
-    
-    <div class="">
-      <img src="{{page.about-image}}" class="border p-6 bg-white w-full object-cover h-[80vh]">
-    </div>
-
-    <div class="p-10">
-      <h1 class="mb-5">{{page.title}}</h1>
-      <p class="mb-10">{{page.about-description}}</p>
-      <a href="/contact.html" class="button">Get in touch</a>
-    </div>
-
-  </div>
-</section>
+{% include intro-section.html %}
 
 <section class="bg-beige py-20">
   <div class="container mx-auto">

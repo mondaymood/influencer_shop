@@ -8,4 +8,5 @@ product-price: 19,90€
 featured: true
 featured-image: /assets/images/shop_preset_2.jpg
 video-id: UK23kO7cMeo
+map: /assets/images/bali_map.png
 ---
