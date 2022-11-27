@@ -92,3 +92,17 @@ $('.slider-container-sneakpeak').slick({
     }
   ]
 });
+
+
+
+/////// Before & After /////// 
+
+// Make sure you've added jquery
+
+$("#ba-slider").on("input change", (e)=>{
+  const sliderPos = e.target.value;
+  // Update the width of the foreground image
+  $('.ba-foreground-img').css('width', `${sliderPos}%`)
+  // Update the position of the slider button
+  $('.ba-slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+});

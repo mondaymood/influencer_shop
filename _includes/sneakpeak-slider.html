@@ -1,0 +1,23 @@
+<!------------------ Ebook Sneakpeak ------------------>
+
+<section class="my-20 container">
+  <h2 class="text-center pb-7">A sneak peak</h2>
+
+  <div class="slider-container-sneakpeak max-w-4xl mx-auto">
+    
+    {% for item in page.sneakpeak %}
+    <div class="slider-item">
+      <div class="grid grid-cols-2 gap-3 items-center">
+        <div>
+          <img src="{{item.image}}" class="h-[70vh] w-full object-cover">
+        </div>
+        <div class="pt-10 md:p-10">
+          <h3 class="mb-5"><strong>{{item.title}}</strong></h1>
+          <p class="mb-10">{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}  
+
+  </div>      
+</section>

@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Presets
-featured-image: /assets/images/shop_preset_2.jpg
-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non dolorem animi, unde harum aut ratione earum tempora praesentium? Explicabo delectus corrupti quisquam nulla earum perferendis doloremque nam, repudiandae consequatur qui.
 video-id: UK23kO7cMeo
-sale: false
+intro-section:
+  link: products_overview
+  button-text: Read more
+  title: Take your photos to the next level
+  featured-image: /assets/images/shop_preset_1.jpg
+  sale: false
+  description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non dolorem animi, unde harum aut ratione earum tempora praesentium? Explicabo delectus corrupti quisquam nulla earum perferendis doloremque nam, repudiandae consequatur qui.
 ---
 
 <!--------------- Intro sales pitch --------------->
@@ -13,7 +17,7 @@ sale: false
 
 <!--------------- Most popular products (9 items) --------------->
 
-<section class="container px-10 mx-auto my-20" id="products_overview"> 
+<section class="container px-10 mx-auto pt-20 mb-20" id="products_overview"> 
   <h2 class="text-center mb-12">Our most popular presets</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
 
@@ -46,14 +50,14 @@ sale: false
   <div class="col-span-6 text-center pb-14">
     <h2>Preview our presets</h2>
   </div>
-  <div class="col-span-6 lg:col-span-1 lg:space-x-0 lg:block ">
-    <span class="border-b pb-1 mb-4 inline-block hover:text-medium-beige cursor-pointer">Sunshine Preset</span>
-    <span class="border-b pb-1 mb-4 inline-block hover:text-medium-beige cursor-pointer">Sunshine Preset</span>
-    <span class="border-b pb-1 mb-4 inline-block hover:text-medium-beige cursor-pointer">Sunshine Preset</span>
-  </div>
-  <div class="col-span-6 lg:col-span-5">
-    <img src="{{page.featured-image}}" class="h-[40vh] lg:h-[60vh] w-full object-cover">
-  </div>
+
+    <div class='ba-container'>
+      <div class='ba-img ba-background-img bg-medium-beige'></div>
+      <div class='ba-img ba-foreground-img bg-dark-beige'></div>
+      <input type="range" min="1" max="100" value="50" class="ba-slider" name='ba-slider' id="ba-slider">
+      <div class='ba-slider-button'></div>
+    </div>
+
 </section>
 
 <!--------------- FAQs --------------->
@@ -72,3 +76,11 @@ sale: false
   {% include video.html %}
 
 </section>
+
+
+<div class='ba-container'>
+  <div class='ba-img ba-background-img bg-medium-beige'></div>
+  <div class='ba-img ba-foreground-img bg-dark-beige'></div>
+  <input type="range" min="1" max="100" value="50" class="ba-slider" name='ba-slider' id="ba-slider">
+  <div class='ba-slider-button'></div>
+</div>

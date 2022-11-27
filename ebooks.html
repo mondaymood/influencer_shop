@@ -1,14 +1,22 @@
 ---
 layout: default
-sneakpeak-image-1: /assets/images/shop_ebook_1.jpg
-sneakpeak-title-1: All the best places to stay
-sneakpeak-description-1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut optio officiis fugit neque ipsum deleniti perferendis, assumenda dolores alias sed doloribus temporibus dicta! Nesciunt at ex fugiat aperiam. Iusto, illum.
-sale: true
 intro-section:
   link: products_overview
-  title: What to do
+  button-text: Read more
+  title: Travel the world with our amazing guides
   featured-image: /assets/images/shop_ebook_1.jpg
+  sale: true
   description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non dolorem animi, unde harum aut ratione earum tempora praesentium? Explicabo delectus corrupti quisquam nulla earum perferendis doloremque nam, repudiandae consequatur qui.
+sneakpeak:
+  - title: All the best places to stay
+    image: /assets/images/shop_ebook_1.jpg
+    description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam consectetur dignissimos, numquam nulla optio consequuntur fuga quae? Sequi assumenda doloremque eos, consequuntur quis saepe distinctio placeat quidem, error laborum nemo.
+  - title: All the best places to eat
+    image: /assets/images/shop_ebook_1.jpg
+    description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam consectetur dignissimos, numquam nulla optio consequuntur fuga quae? Sequi assumenda doloremque eos, consequuntur quis saepe distinctio placeat quidem, error laborum nemo.  
+  - title: All the best places to sleep
+    image: /assets/images/shop_ebook_1.jpg
+    description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam consectetur dignissimos, numquam nulla optio consequuntur fuga quae? Sequi assumenda doloremque eos, consequuntur quis saepe distinctio placeat quidem, error laborum nemo.    
 ---
 
 <!--------------- Intro sales pitch --------------->
@@ -18,7 +26,7 @@ intro-section:
 <!--------------- Most popular products (9 items) --------------->
 
 
-<section class="container px-10 mx-auto my-20" id="products_overview"> 
+<section class="container px-10 mx-auto pt-20 mb-20" id="products_overview"> 
   <h2 class="text-center mb-12">Our most popular presets</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 container">
 
@@ -39,7 +47,7 @@ intro-section:
 
 <!--------------- Sneak peak carousel --------------->
 
-{% include ebook-sneakpeak.html %}
+{% include sneakpeak-slider.html %}
 
 <!--------------- Testimonials --------------->
 

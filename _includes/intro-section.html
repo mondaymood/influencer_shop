@@ -7,7 +7,7 @@
         <div class="rounded-full w-md relative h-[80vh] bg-dark-beige bg-cover bg-center" style="background-image: url('{{page.intro-section.featured-image}}');">
 
           <!--------------- Sale button --------------->
-          {% if page.sale == true %}
+          {% if page.intro-section.sale == true %}
           <div class="rounded-full bg-dark-beige h-32 w-32 md:h-44 md:w-44 absolute top-0 md:top-5 -left-2 md:-left-12 flex justify-center items-center drop-shadow">
             <h2 class="text-4xl text-white tracking-[.1em] -rotate-12">Sale!</h2>
           </div>
@@ -19,7 +19,7 @@
     <div class="p-10">
       <h1 class="mb-5">{{page.intro-section.title}}</h1>
       <p class="mb-10">{{page.intro-section.description}}</p>
-      <a href="#{{page.intro-section.link}}" class="button">Read more</a>
+      <a href="#{{page.intro-section.link}}" class="button">{{page.intro-section.button-text}}</a>
     </div>
 
   </div>
