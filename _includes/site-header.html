@@ -1,21 +1,37 @@
 <!------------------ Site-Header ------------------>
 
-<header class="p-6 my-10">
-  <div class="flex items-center justify-center space-x-20">
-    <div class="">
+<header class="px-10 md:p-6 my-10 relative">
+  <!------------------ Nav bar ------------------>
+  <div class="flex items-center justify-between md:justify-center md:space-x-20"> 
+    <div class="hidden md:block">
       <a href="/about.html" class="nav">About</a>
     </div>
-    <div class="">
+    <div class="hidden md:block">
       <a href="/ebooks.html" class="nav">Ebooks</a>
     </div>
     <div class="text-6xl font-display" class="hover:border-b pb-2">
       <a href="/shop.html">Maleta</a>
     </div>
-    <div class="">
+    <div class="hidden md:block">
       <a href="/presets.html" class="nav">Presets</a>
     </div>
-    <div class="">
+    <div class="hidden md:block">
       <a href="/contact.html" class="nav">Contact</a>
     </div>
+    <div class="block md:hidden">
+      <a href="#" class="z-20 relative burger">X</a>
+    </div>
   </div>
+
+  <!------------------ Mobile menu ------------------>
+  <div class="md:hidden bg-graphit fixed inset-0 h-screen w-screen z-10 transition-all duration-500 mobile-menu mobile-menu-hidden text-beige">
+    <div class="h-screen flex flex-col items-center justify-center space-y-10">
+      <a href="/about.html" class="block font-display text-4xl">About</a>
+      <a href="/ebooks.html" class="block font-display text-4xl">Ebooks</a>
+      <a href="/presets.html" class="block font-display text-4xl">Presets</a>
+      <a href="/contact.html" class="block font-display text-4xl">Contact</a>
+      
+    </div>
+  </div>
+
 </header>

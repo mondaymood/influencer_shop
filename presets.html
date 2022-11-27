@@ -45,15 +45,15 @@ intro-section:
 
 <!--------------- Image slider Before/After --------------->
 
-<section class="grid grid-cols-1 lg:grid-cols-6 gap-3 container my-20 ">
+<section class="container my-20 ">
   
-  <div class="col-span-6 text-center pb-14">
+  <div class="text-center pb-14">
     <h2>Preview our presets</h2>
   </div>
 
-    <div class='ba-container'>
-      <div class='ba-img ba-background-img bg-medium-beige'></div>
-      <div class='ba-img ba-foreground-img bg-dark-beige'></div>
+    <div class="ba-container mx-auto">
+      <div class='ba-img ba-background-img'></div>
+      <div class='ba-img ba-foreground-img'></div>
       <input type="range" min="1" max="100" value="50" class="ba-slider" name='ba-slider' id="ba-slider">
       <div class='ba-slider-button'></div>
     </div>
@@ -69,18 +69,10 @@ intro-section:
 
 <!--------------- Video section --------------->
 
-<section class="my-10 p-6 text-center container mx-auto">
+<section class="my-10 text-center container mx-auto">
 
   <h2>How to use our presets</h2>
 
   {% include video.html %}
 
 </section>
-
-
-<div class='ba-container'>
-  <div class='ba-img ba-background-img bg-medium-beige'></div>
-  <div class='ba-img ba-foreground-img bg-dark-beige'></div>
-  <input type="range" min="1" max="100" value="50" class="ba-slider" name='ba-slider' id="ba-slider">
-  <div class='ba-slider-button'></div>
-</div>
