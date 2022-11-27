@@ -99,3 +99,13 @@ h1, h2 {
 .slick-next {
   right: -4rem;
 }
+
+.slick-track {
+  display: flex;
+}
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
