@@ -10,7 +10,7 @@ html {
 
 @layer components {
     .button {
-      @apply inline-block py-4 px-6 hover:bg-dark-beige bg-medium-beige text-white text-[0.8rem] uppercase tracking-[.2em];
+      @apply rounded-full transition duration-500 inline-block py-4 px-6 bg-dark-beige hover:bg-medium-beige text-white text-[0.8rem] uppercase tracking-[.2em];
     }
     .nav {
         @apply text-[0.8rem] hover:border-b pb-2 uppercase tracking-[.2em];
@@ -199,4 +199,47 @@ h1, h2 {
 
 .burger.active {
   color: white;
+}
+
+
+.shopify-buy__btn-wrapper {
+  margin-top: 0;
+}
+
+.shopify-buy__btn-wrapper {
+  margin-top: 0px;
+}
+
+.shopify-buy__btn {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* ------------ Cookie banner ------------ */
+
+#cookie-notice {
+  padding: 1rem 1rem;
+  display: none;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #505050;
+  color: rgba(255,255,255,0.8);
+}
+#cookie-notice a {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+#close-cookie-banner {
+padding: 1rem;
+cursor: pointer;
+font-size: 0.8rem;
+opacity: 0.5
 }

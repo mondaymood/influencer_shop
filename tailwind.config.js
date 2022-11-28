@@ -25,10 +25,10 @@ module.exports = {
       'white': '#ffffff',
       'black': '#000000',
       'beige': '#ede8e4',
-      'medium-beige': '#a7998d',
-      'dark-beige': '#908173',
+      'medium-beige': '#D9D0C9',
+      'dark-beige': '#C3BAB2',
       'graphit': '#313131',
-      'blue': '#313a43',
+      'green': '#B9C3A3',
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],

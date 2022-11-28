@@ -13,9 +13,11 @@ layout: default
 
     <div class="p-10 flex-col">
       <h1 class="mb-5">{{page.product.title}}</h1>
-      <p class="mb-10">{{page.product.description}}</p>
-      <span class="block pb-10">{{page.product.price}}</span>
-      <div class="transition duration-500" id='product-component-1669547015174'></div>
+      <p class="mb-10 border-b pb-5">{{page.product.description}}</p>
+      <div class="flex justify-between items-center">
+        <div class="block tracking-[.08em] font-semibold">{{page.product.price}}</div>
+        <div class="transition duration-500 button" id='product-component-1669547015174'></div>
+      </div>
     </div>
 
   </div>
